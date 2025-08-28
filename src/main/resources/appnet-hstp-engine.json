@@ -1,0 +1,8 @@
+{
+  "serviceHosts": [
+    "53100"
+  ],
+  "serviceAddresses":[
+    "admin.mcpdirect.ai"
+  ]
+}
