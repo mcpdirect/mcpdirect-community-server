@@ -1,4 +1,4 @@
-package ai.mcpdirect.community.servlet;
+package appnet.hstp.labs.http.servlet;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import appnet.hstp.*;

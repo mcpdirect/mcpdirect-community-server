@@ -1,4 +1,4 @@
-package ai.mcpdirect.community.servlet;
+package appnet.hstp.labs.http.servlet;
 
 import appnet.hstp.USL;
 import jakarta.servlet.http.HttpServlet;

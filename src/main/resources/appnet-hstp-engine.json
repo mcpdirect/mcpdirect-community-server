@@ -1,6 +1,6 @@
 {
   "serviceHosts": [
-    "53100"
+    "ssl://0.0.0.0:53100"
   ],
   "serviceAddresses":[
     "admin.mcpdirect.ai"

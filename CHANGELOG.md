@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.2.0] - 2025-09-10
+### Added
+- SSL support for HSTP service hosts
+- doGet method to HstpServlet for health checks
+- SSLContextFactory implementation for secure connections
+
+### Changed
+- Updated project version to 1.2.0-SNAPSHOT in pom.xml
+- Updated mcpdirect-gateway dependency version to 1.1.0-SNAPSHOT
+- Refactored package structure for servlet classes
+- Configured serviceHosts to use SSL (ssl://0.0.0.0:53100)
+- Modified ServletComponentScan and ServiceScan annotations to include gateway packages
+- Updated roadmap in README.md
+
+### Fixed
+- Added ServletException import to HstpServlet
+
 ## [1.1.0] - 2025-08-30
 ### Changed
 - Updated project name from "MCPDirect Studio" to "MCPDirect Community Server" in documentation

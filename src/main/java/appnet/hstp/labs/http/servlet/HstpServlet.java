@@ -1,4 +1,4 @@
-package ai.mcpdirect.community.servlet;
+package appnet.hstp.labs.http.servlet;
 import appnet.hstp.Service;
 import appnet.hstp.ServiceHeaders;
 import appnet.hstp.USL;
@@ -6,6 +6,7 @@ import appnet.hstp.engine.util.JSON;
 import appnet.hstp.exception.ServiceNotFoundException;
 import appnet.hstp.exception.USLSyntaxException;
 
+import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletOutputStream;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -23,6 +24,13 @@ import static appnet.hstp.Service.*;
 public class HstpServlet extends AbstractHstpServlet {
     private static final Logger LOG = LoggerFactory.getLogger(HstpServlet.class);
     public static boolean DEBUG;
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        resp.setCharacterEncoding("UTF-8");
+        resp.setHeader("Content-type", "application/json; charset=UTF-8");
+        resp.getWriter().write("{\"code\":0}");
+    }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException{
