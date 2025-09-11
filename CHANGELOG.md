@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.2.1] - 2025-09-10
+### Changed
+- Updated project version to 1.2.1-SNAPSHOT in pom.xml
+- Updated mcpdirect-backend dependency version to 1.1.1-SNAPSHOT
+
 ## [1.2.0] - 2025-09-10
 ### Added
 - SSL support for HSTP service hosts
