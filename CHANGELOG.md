@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.3] - 2025-09-11
+### Changed
+- Updated project version to 1.2.3-SNAPSHOT in pom.xml
+- Updated mcpdirect-backend dependency version to 1.1.3-SNAPSHOT
+- Updated mcpdirect-gateway dependency version to 1.1.2-SNAPSHOT
+
 ## [1.2.2] - 2025-09-11
 ### Changed
 - Updated project version to 1.2.2-SNAPSHOT in pom.xml
