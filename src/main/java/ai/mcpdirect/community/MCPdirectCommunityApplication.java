@@ -14,6 +14,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import javax.net.ssl.SSLContext;
 import java.util.Map;
@@ -22,7 +24,7 @@ import java.util.Map;
 @ServletComponentScan({"ai.mcpdirect.gateway","appnet.hstp.labs.http.servlet"})
 @ComponentScan("ai.mcpdirect.backend")
 @ServiceScan({"ai.mcpdirect.gateway","ai.mcpdirect.backend"})
-public class MCPdirectCommunityApplication implements CommandLineRunner {
+public class MCPdirectCommunityApplication implements CommandLineRunner, WebMvcConfigurer {
     private static final Logger LOG = LoggerFactory.getLogger(MCPdirectCommunityApplication.class);
     public static void main(String[] args) throws ServiceEngineException {
         SpringApplication app = new SpringApplication(MCPdirectCommunityApplication.class);
@@ -41,6 +43,16 @@ public class MCPdirectCommunityApplication implements CommandLineRunner {
         LOG.info("ServiceEngine "+serviceEngine+" started");
     }
 
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**") //**匹配的是我们所有后台的路径，代表后台共享了什么资源
+                .allowedOrigins("*") //匹配的前台的服务器地址
+//                .allowedOriginPatterns("*")
+                .maxAge(600)
+                .allowedHeaders("*")
+                .allowedMethods("GET", "POST")
+                .allowCredentials(true); //允许的前台的请求方式
+
+    }
     @Override
     public void run(String... args) throws Exception {
 //        ServiceEngineFactory.setServiceEngineIdSeed("ai.mcpdirect.community");
