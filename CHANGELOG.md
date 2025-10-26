@@ -5,6 +5,8 @@
 - Updated project version to 1.3.0-SNAPSHOT
 - Updated mcpdirect-backend dependency version to 1.2.0-SNAPSHOT
 - Updated mcpdirect-gateway dependency version to 1.2.0-SNAPSHOT
+- Added CORS configuration support to allow cross-origin requests
+- Changed server port from 8081 to 8088
 
 ## [1.2.3] - 2025-09-11
 ### Changed

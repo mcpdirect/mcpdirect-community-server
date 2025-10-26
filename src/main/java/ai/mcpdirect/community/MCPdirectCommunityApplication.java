@@ -6,6 +6,7 @@ import appnet.hstp.ServiceEngine;
 import appnet.hstp.ServiceEngineFactory;
 import appnet.hstp.annotation.ServiceScan;
 import appnet.hstp.exception.ServiceEngineException;
+import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.Banner;
@@ -21,8 +22,8 @@ import javax.net.ssl.SSLContext;
 import java.util.Map;
 
 @SpringBootApplication
-@ServletComponentScan({"ai.mcpdirect.gateway","appnet.hstp.labs.http.servlet"})
-@ComponentScan("ai.mcpdirect.backend")
+@ServletComponentScan("appnet.hstp.labs.http.servlet")
+@ComponentScan({"ai.mcpdirect.gateway", "ai.mcpdirect.backend"})
 @ServiceScan({"ai.mcpdirect.gateway","ai.mcpdirect.backend"})
 public class MCPdirectCommunityApplication implements CommandLineRunner, WebMvcConfigurer {
     private static final Logger LOG = LoggerFactory.getLogger(MCPdirectCommunityApplication.class);
