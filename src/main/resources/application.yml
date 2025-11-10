@@ -14,4 +14,4 @@ spring:
       password: ${MCPDIRECT_REDIS_PASSWORD}
 
 server:
-  port: 8088
+  port: ${MCPDIRECT_HTTP_PORT}
