@@ -1,9 +1,9 @@
 # Changelog
 
-## [Unreleased] - 2025-10-08
+## [Unreleased] - 2025-11-15
 ### Changed
+- Updated mcpdirect-backend dependency version from 2.1.1-SNAPSHOT to 2.1.2-SNAPSHOT
 - Updated project version to 2.1.2-SNAPSHOT
-- Updated mcpdirect-backend dependency version to 2.1.1-SNAPSHOT
 - Updated mcpdirect-gateway dependency version to 2.0.0-SNAPSHOT
 - Added CORS configuration support to allow cross-origin requests
 - Changed server port from 8081 to environment variable MCPDIRECT_HTTP_PORT
