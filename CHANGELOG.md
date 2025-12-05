@@ -2,6 +2,10 @@
 
 ## [Unreleased] - 2025-12-03
 ### Changed
+- Updated mcpdirect-gateway dependency version from 2.1.1-SNAPSHOT to 2.2.0-SNAPSHOT
+
+## [Unreleased] - 2025-12-03
+### Changed
 - Updated mcpdirect-backend dependency version from 2.2.0-SNAPSHOT to 2.2.1-SNAPSHOT
 - Updated mcpdirect-gateway dependency version from 2.1.0-SNAPSHOT to 2.1.1-SNAPSHOT
 
